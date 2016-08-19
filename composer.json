@@ -7,7 +7,8 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.2.*",
-        "barryvdh/laravel-ide-helper": "^2.2"
+        "barryvdh/laravel-ide-helper": "^2.2",
+        "guzzlehttp/guzzle": "dev-master"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
@@ -26,7 +27,8 @@
     },
     "autoload-dev": {
         "classmap": [
-            "tests/TestCase.php"
+            "tests/TestCase.php",
+            "app/Http/Controllers/Helper/ApiUrl.php"
         ]
     },
     "scripts": {
