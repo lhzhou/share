@@ -28,33 +28,27 @@ class Http extends Controller
             [
                 'form_params' => $params,
                 'timeout' => 30,
-                'http_errors' => false
+                'http_errors' => true
             ]
         );
 
 
         if ($response->getStatusCode() != 200)
         {
-            return [
-                'code' => -1 ,
-                'message'   => '链接服务器错误'
-
-            ];
+            return \Response::json((object)['status' => -1 , 'message'   => '链接服务器错误']);
         }
 
-        $results = $response->getBody();
-
+        $results = $response->getBody(true);
 
 
         if (is_object(json_decode($results)))
         {
             return  json_decode($results);
-        }else{
-            return [
-                'code' => -1 ,
-                'message'   => '返回对象错误'
 
-            ];
+        }else{
+
+            return \Response::json((object)['status' => -1 , 'message'   => '返回对象错误']);
+
         }
 
     }
@@ -87,23 +81,18 @@ class Http extends Controller
 
         if ($response->getStatusCode() != 200)
         {
-            return [
-                'code' => -1 ,
-                'message'   => '链接服务器错误'
-
-            ];
+            return \Response::json((object)['status' => -1 , 'message'   => '链接服务器错误']);
         }
+
+        $results = $response->getBody();
+
 
 
         if (is_object(json_decode($results)))
         {
             return  json_decode($results);
         }else{
-            return [
-                'code' => -1 ,
-                'message'   => '返回对象错误'
-
-            ];
+            return \Response::json((object)['status' => -1 , 'message'   => '返回对象错误']);
         }
 
     }

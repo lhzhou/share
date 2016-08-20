@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Validator;
 
 use App\Http\Requests;
+use Cookie;
 
 class UserProfile extends Controller
 {
@@ -19,11 +20,14 @@ class UserProfile extends Controller
     public function login(Request $request)
     {
 
-        return view('index.login');
+        return view('user.login');
     }
 
     public function submitLogin(Request $request)
     {
+
+
+        /* 配置验证 */
         $messages = [
             'username.required' => '请输入用户名',
             'password.required' => '请输入密码'
@@ -34,6 +38,7 @@ class UserProfile extends Controller
             'password' => 'required',
         ];
 
+        /* 开始验证 */
         $validator = Validator::make($request->all(), $rules, $messages);
 
         if ($validator->fails()) {
@@ -46,18 +51,26 @@ class UserProfile extends Controller
             );
         }
 
+        /* 获取input */
+
         $params['username'] = $request->input('username');
         $params['password'] = $request->input('password');
 
 
-        $res = Http::post(ApiUrl::LOGIN , $params);
+        /* 调用登录API */
+
+        $res = Http::post(env('API_URL').'/user/login' , $params);
 
         if ($res->status == 1)
         {
+            /* 写入缓存 */
+
+            Cookie::make('test', '124234234234324324234', '10');
+
             return \Response::json(
                 [
                     'method'    => 'redirect',
-                    'url'       =>  url('index'),
+                    'url'       =>  url('/'),
                 ]
             );
         } else {
@@ -65,7 +78,7 @@ class UserProfile extends Controller
             return \Response::json(
             [
                 'method'    => 'alert',
-                'msg'       =>  'HI'
+                'msg'       =>  $res->message
             ]
         );
         }

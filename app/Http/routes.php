@@ -11,11 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
-Route::get('/index' , 'Welcome@index');
+Route::get('/' , 'Welcome@index');
 
 Route::get('/login' , 'UserProfile@login');
 Route::post('/login' , 'UserProfile@submitLogin');
