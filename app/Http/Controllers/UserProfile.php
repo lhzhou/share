@@ -101,4 +101,9 @@ class UserProfile extends Controller
 
         return view('user.invited' , $data);
     }
+
+    public function wallet()
+    {
+        
+    }
 }

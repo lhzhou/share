@@ -84,7 +84,7 @@
             </li>
 
             <li>
-                <a href="">
+                <a href="http://shang.qq.com/wpa/qunwpa?idkey=d1e50e5aa9302df9fe3924d252f8358f8fc8b6f1441e6cf0c7615ab37331afb5">
                     <div class="yz_ico"> <span class="fa fa-weixin icon1"></span> </div>
                     <span>QQ交流群</span>
                 </a>
