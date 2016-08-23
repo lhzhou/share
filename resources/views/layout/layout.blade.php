@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{{url('css/sweetalert2.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
+
     <link rel="stylesheet" href="{{url('css/style.css')}}">
 
     <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
@@ -23,7 +25,7 @@
 </head>
 
 <body>
-<div class="container">
+<div class="container-fluid">
 
     @yield('content')
 </div>

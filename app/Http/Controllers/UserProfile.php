@@ -65,7 +65,12 @@ class UserProfile extends Controller
         {
             /* 写入缓存 */
 
-            Cookie::make('test', '124234234234324324234', '10');
+            session(
+                [
+                    'user.id' => $res->results->id,
+                    'user.name' => $res->results->username,
+                ]
+            );
 
             return \Response::json(
                 [
@@ -73,16 +78,27 @@ class UserProfile extends Controller
                     'url'       =>  url('/'),
                 ]
             );
+
         } else {
 
             return \Response::json(
-            [
-                'method'    => 'alert',
-                'msg'       =>  $res->message
-            ]
-        );
+                [
+                    'method'    => 'alert',
+                    'msg'       =>  $res->message
+                ]
+            );
+
         }
 
 
+    }
+
+    public function invited()
+    {
+
+        $data = [];
+        $data['title'] = '我要收徒';
+
+        return view('user.invited' , $data);
     }
 }

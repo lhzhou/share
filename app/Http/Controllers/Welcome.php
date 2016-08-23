@@ -12,12 +12,6 @@ class Welcome extends Controller
     public function index()
     {
 
-
-
-        var_dump(Cookie::get('test'));
-
-
-
-
+        return view('welcome');
     }
 }

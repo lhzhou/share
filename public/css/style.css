@@ -21,3 +21,85 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     line-height: 48px;
     padding: 0 15px
 }
+
+.main_top {
+    background:#313131;
+    font-size:0.9em;
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+
+
+}
+
+.main_top span.left {width:50px; text-align:center; padding-left:5px; padding-right:8px; float:left}
+.main_top span.left img {width:100%;}
+.main_top span.center {width:60%; color:#fff; float:left; padding-top:0px;}
+.main_top span.center1 {width:60%; color:#fff; float:left; padding-top:2px;font-size:12px;}
+.main_top span.right {width:20%; float:right; padding-top:5px; padding-right:5px; text-align:right;}
+
+
+.main-user-info{ height: auto; color: #FFFFCC; margin-bottom: 3px; background-color: #df3031;padding-left: 5px; padding-right: 5px}
+.main-user-info-avatar{
+
+    width: 4.8125em;
+    height: 4.8125em;
+    border-radius: 4em;
+    border: 0.125em solid #FFF;
+    box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2) inset;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    margin-right: 1em;
+    display: inline-block;
+    overflow: hidden;
+    background-size: cover;
+
+}
+
+.main-user-info-userInfo{padding-left:10px;padding-top:1rem;width:70%; margin-left: 5%; float: left}
+
+
+.main-menu .icon1{ color: #0495e8}
+.main-menu .icon2{ color:  #FF0033}
+
+.main-menu .yz_ico{
+    text-align: center;
+}
+
+
+.main-menu{ background-color:#fff;}
+.main-menu ul:first-child {
+    border-top: 1px solid #F6F6F6;
+}
+.main-menu ul {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #F6F6F6;
+    margin: 0px;
+}
+.main-menu li:first-child {
+    border-left: 0px none;
+}
+.main-menu li {
+    display: table-cell;
+    width: 25%;
+    text-align: center;
+    border-left: 1px solid #eee;
+    padding-bottom: 0.5rem;
+}
+.main-menu .yz_ico{
+    text-align: center;
+    padding-top: 15px;
+}
+
+.main-menu .icon, .nav-index .fa{
+    font-size: 25px;
+    line-height: 3rem;
+}
+
+.main-menu li span{color: #666; font-size: 14px}
+
+.main-menu li  .icon, .main-menu .fa {font-size: 30px;line-height: 2rem;}
+
