@@ -61,7 +61,6 @@ class UserProfile extends Controller
 
         $res = Http::post(env('API_URL').'/user/login' , $params);
 
-        return $res->results->id;
         if ($res->status == 1)
         {
             /* 写入缓存 */

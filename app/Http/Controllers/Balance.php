@@ -6,43 +6,27 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
+use App\Http\Controllers\Helper\Http;
 class Balance extends Controller
 {
     public function wallet()
     {
 
-        return \Session::get('user.id');
+        $data['title']  =   '我的钱包';
 
-        $params['user_id'] = '';
+        $params['user_id'] = session('user.id');
         $res = Http::post(env('API_URL').'/user/getWalletByUserID' , $params);
 
-        if ($res->status == 1)
-        {
-            /* 写入缓存 */
+        if ($res->status == 1) {
 
-            session(
-                [
-                    'user.id' => $res->results->id,
-                    'user.name' => $res->results->username,
-                ]
-            );
-
-            return \Response::json(
-                [
-                    'method'    => 'redirect',
-                    'url'       =>  url('/'),
-                ]
-            );
+            $data['wallet'] = $res->results;
 
         } else {
 
-            return \Response::json(
-                [
-                    'method'    => 'alert',
-                    'msg'       =>  $res->message
-                ]
-            );
-
+            $data['msg'] = $res->message;
         }
+
+
+        return view('balance.wallet' , $data);
     }
 }

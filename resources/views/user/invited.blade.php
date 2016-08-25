@@ -3,6 +3,7 @@
 @section('content')
 
 @include('layout.head')
+
     <div class="row" style="margin-top: 15px">
         <div class="col-xs-12">
             <span class="label label-success " style="font-size: 1.5rem;">推广链接:</span>
