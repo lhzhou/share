@@ -10,6 +10,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('user/Help/show' , 'UserHelp@show');
     Route::get('out' , 'UserProfile@out');
     Route::get('wallet' , 'Balance@wallet');
+    Route::get('takeMoney' , 'Balance@takeMoney');
+    Route::post('takeMoney' , 'Balance@takeMoneySubmit');
 
 
 });

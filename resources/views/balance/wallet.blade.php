@@ -21,7 +21,7 @@
     <div class="btn-group btn-group-justified " role="group" aria-label="...">
 
         <div class="btn-group btn-group-lg" role="group">
-            <button type="button" class="btn btn-success">我要提现</button>
+            <a href="{{url('takeMoney')}}" class="btn btn-success">我要提现</a>
         </div>
 
         <div class="btn-group btn-group-lg" role="group">

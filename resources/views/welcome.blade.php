@@ -107,7 +107,7 @@
 
         <ul>
             <li>
-                <a href="">
+                <a href="{{url('takeMoney')}}">
                     <div class="yz_ico"> <span class="fa fa-credit-card icon2"></span> </div>
                     <span>我要提现</span>
                 </a>

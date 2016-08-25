@@ -29,4 +29,22 @@ class Balance extends Controller
 
         return view('balance.wallet' , $data);
     }
+
+    public function takeMoney()
+    {
+        $data['title'] = '提现申请';
+
+
+        return view('balance.takeMoney' , $data);
+    }
+
+    public function takeMoneySubmit(Request $request)
+    {
+        $params['account']      =       $request->input('account');
+        $params['name']         =       $request->input('name');
+        $params['qty']          =       $request->input('qty');
+
+
+
+    }
 }
