@@ -56,7 +56,7 @@
             </li>
 
             <li>
-                <a href="">
+                <a href="{{url('wallet')}}">
                     <div class="yz_ico"> <span class="fa fa-cny xz icon2"></span> </div>
                     <span>我的钱包</span>
                 </a>
@@ -121,13 +121,13 @@
             </li>
 
             <li>
-                <a href="">
+                <a href="{{url('user/changPwd')}}">
                     <div class="yz_ico"> <span class="fa fa-expeditedssl icon2"></span> </div>
                     <span>密码修改</span>
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{url('out')}}">
                     <div class="yz_ico"> <span class="fa fa-power-off icon2"></span> </div>
                     <span>退出登录</span>
                 </a>

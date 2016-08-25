@@ -61,6 +61,7 @@ class UserProfile extends Controller
 
         $res = Http::post(env('API_URL').'/user/login' , $params);
 
+        return $res->results->id;
         if ($res->status == 1)
         {
             /* 写入缓存 */
@@ -102,8 +103,9 @@ class UserProfile extends Controller
         return view('user.invited' , $data);
     }
 
-    public function wallet()
+    public function out()
     {
-        
+        \Session::clear();
+        return redirect(url('/login'));
     }
 }
