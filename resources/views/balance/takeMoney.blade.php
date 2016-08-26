@@ -19,17 +19,17 @@
         <div class="form-group form-group-lg">
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-credit-card"></i></span>
-                <input id="login-username" type="text" class="form-control" name="account" value="" placeholder="支付宝账号">
+                <input type="text" class="form-control" name="account" placeholder="支付宝账号" required autofocus="off">
             </div>
 
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="login-password" type="password" class="form-control" name="name" placeholder="支付姓名">
+                <input type="text" class="form-control" name="name" placeholder="支付姓名" required autofocus="off">
             </div>
 
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-yen"></i></span>
-                <input id="login-password" type="password" class="form-control" name="qty" placeholder="提现金额">
+                <input type="text" class="form-control" name="qty" placeholder="提现金额" required autofocus="off">
             </div>
 
             <div class="form-group">

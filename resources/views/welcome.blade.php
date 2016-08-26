@@ -114,7 +114,7 @@
             </li>
 
             <li>
-                <a href="">
+                <a href="{{url('takeMoneyLog')}}">
                     <div class="yz_ico"> <span class="fa fa-pie-chart icon2"></span> </div>
                     <span>提现记录</span>
                 </a>

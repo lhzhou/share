@@ -12,12 +12,12 @@
         <div class="form-group form-group-lg">
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="手机号">
+                <input id="login-username" type="text" class="form-control" name="username"  placeholder="手机号" required>
             </div>
 
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
-                <input id="login-password" type="password" class="form-control" name="password" placeholder="登录密码">
+                <input id="login-password" type="password" class="form-control" name="password" placeholder="登录密码" required>
             </div>
 
             <div class="form-group">
