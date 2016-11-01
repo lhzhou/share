@@ -7,12 +7,12 @@
         <span style="color: #FFCC33;font-size: 18px">{{env('SITE_NAME')}}</span><i style="color: #FFCC33;font-style: normal;font-size: 12px;margin-left: 15px">分享创造价值</i>
     </div>
 
-    <form class="form-horizontal col-sm-12 ajaxForm" style="margin-top: 15px" role="form" method="post" action="{{url('login')}}">
+    <form class="form-horizontal col-sm-12 ajaxForm " style="margin-top: 15px" role="form" method="post" action="{{url('login')}}">
 
         <div class="form-group form-group-lg">
             <div style="margin-bottom: 25px" class="input-group">
                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                <input id="login-username" type="text" class="form-control" name="username"  placeholder="手机号" required>
+                <input id="login-username" type="text" class="form-control" name="mobile"  placeholder="手机号" required>
             </div>
 
             <div style="margin-bottom: 25px" class="input-group">

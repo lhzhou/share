@@ -1,10 +1,16 @@
 <?php
 
 
+Route::get('/login' , 'AccountController@login');
+Route::post('/login' , 'AccountController@submitLogin');
+
+Route::get('/test' , 'Welcome@test');
+Route::get('/show/{id}' ,  'Welcome@show');
+
+
 Route::group(['middleware' => ['web']], function () {
+
     Route::get('/' , 'Welcome@index');
-    Route::get('/login' , 'UserProfile@login');
-    Route::post('/login' , 'UserProfile@submitLogin');
     Route::get('user/Invited' , 'UserProfile@invited');
     Route::get('user/Help' , 'UserHelp@index');
     Route::get('user/Help/show' , 'UserHelp@show');

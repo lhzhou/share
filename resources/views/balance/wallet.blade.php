@@ -4,13 +4,13 @@
 
 @include('layout.head')
     <div class="notice notice-success">
-        <strong>账号余额</strong> {{$wallet->total}}
+        <strong>账号余额</strong> {{$wallet->balance}}
     </div>
     <div class="notice notice-danger">
-        <strong>分享收益</strong> {{$wallet->click}}
+        <strong>分享收益</strong> {{$wallet->share}}
     </div>
     <div class="notice notice-info">
-        <strong>徒弟收益</strong> {{$wallet->apprentice}}
+        <strong>徒弟收益</strong> {{$wallet->lower}}
     </div>
 
     {{--"user_id": "9a68851d-f933-3ba3-951f-93d52f1a9fa0",--}}

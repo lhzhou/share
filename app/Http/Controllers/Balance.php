@@ -15,9 +15,10 @@ class Balance extends Controller
         $data['title']  =   '我的钱包';
 
         $params['user_id'] = session('user.id');
-        $res = Http::post(env('API_URL').'balance/getWalletByUserID' , $params);
 
-        if ($res->status == 1) {
+        $res = Http::post(env('API_URL').'Wallet/Balance' , $params);
+
+        if ($res->status == 0) {
 
             $data['wallet'] = $res->results;
 

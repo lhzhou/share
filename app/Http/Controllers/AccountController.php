@@ -10,7 +10,7 @@ use Validator;
 use App\Http\Requests;
 use Cookie;
 
-class UserProfile extends Controller
+class AccountController extends Controller
 {
 
     /**
@@ -29,12 +29,12 @@ class UserProfile extends Controller
 
         /* 配置验证 */
         $messages = [
-            'username.required' => '请输入用户名',
+            'mobile.required' => '请输入用户名',
             'password.required' => '请输入密码'
         ];
 
         $rules= [
-            'username' => 'required',
+            'mobile' => 'required',
             'password' => 'required',
         ];
 
@@ -53,22 +53,24 @@ class UserProfile extends Controller
 
         /* 获取input */
 
-        $params['username'] = $request->input('username');
+        $params['mobile'] = $request->input('mobile');
         $params['password'] = $request->input('password');
 
 
         /* 调用登录API */
 
-        $res = Http::post(env('API_URL').'/user/login' , $params);
+        $res = Http::post(env('API_URL').'Account/Login' , $params);
 
-        if ($res->status == 1)
+        if ($res->status == 0)
         {
             /* 写入缓存 */
 
             session(
                 [
                     'user.id' => $res->results->id,
-                    'user.name' => $res->results->username,
+                    'user.name' => $res->results->full_name,
+                    'user.mobile' => $res->results->mobile,
+                    'user.pid' => $res->results->pid,
                 ]
             );
 
