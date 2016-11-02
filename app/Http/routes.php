@@ -24,10 +24,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('user/Help/show' , 'UserHelp@show');
     Route::get('out' , 'UserProfile@out');
 
-    Route::get('wallet' , 'BalanceController@wallet');
-    Route::get('wallet/Withdrawals' , 'BalanceController@withdrawals');
-    Route::post('wallet/Withdrawals' , 'BalanceController@withdrawalsSubmit');
-    Route::get('wallet/Withdrawals/Log' , 'BalanceController@withdrawalsLog');
+    Route::get('Wallet' , 'BalanceController@wallet');
+    Route::get('Wallet/Withdrawals' , 'BalanceController@withdrawals');
+    Route::post('Wallet/Withdrawals' , 'BalanceController@withdrawalsSubmit');
+    Route::get('Wallet/Withdrawals/Log' , 'BalanceController@withdrawalsLog');
 
 
 

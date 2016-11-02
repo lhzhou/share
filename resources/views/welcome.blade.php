@@ -56,7 +56,7 @@
             </li>
 
             <li>
-                <a href="{{url('wallet')}}">
+                <a href="{{url('Wallet')}}">
                     <div class="yz_ico"> <span class="fa fa-cny xz icon2"></span> </div>
                     <span>我的钱包</span>
                 </a>
