@@ -2,8 +2,9 @@
 
 
 Route::get('/Login' , 'AccountController@login');
-
+Route::post('/Login' , 'AccountController@submitLogin');
 Route::get('/Register' , 'AccountController@register');
+Route::post('/Register' , 'AccountController@registerSubmit');
 
 
 
@@ -13,8 +14,7 @@ Route::get('/show/{id}' ,  'WelcomeController@show');
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::post('/Register' , 'AccountController@registerSubmit');
-    Route::post('/Login' , 'AccountController@submitLogin');
+
 
 
     Route::get('/' , 'WelcomeController@index');
