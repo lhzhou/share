@@ -30,7 +30,7 @@ class BalanceController extends Controller
         return view('balance.wallet' , $data);
     }
 
-    public function takeMoney()
+    public function withdrawals()
     {
         $data['title'] = '提现申请';
 
@@ -38,7 +38,7 @@ class BalanceController extends Controller
         return view('balance.takeMoney' , $data);
     }
 
-    public function takeMoneySubmit(Request $request)
+    public function withdrawalsSubmit(Request $request)
     {
         $params['alipay_account']      =   $request->input('account');
         $params['alipay_name']         =   $request->input('name');
