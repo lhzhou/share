@@ -14,7 +14,7 @@
     </div>
 
 
-    <form class="form-horizontal col-sm-12 ajaxForm" style="margin-top: 15px" role="form" method="post" action="{{url('Withdrawals')}}">
+    <form class="form-horizontal col-sm-12 ajaxForm" style="margin-top: 15px" role="form" method="post" action="{{url('Wallet/Withdrawals')}}">
 
         <div class="form-group form-group-lg">
             <div style="margin-bottom: 25px" class="input-group">
