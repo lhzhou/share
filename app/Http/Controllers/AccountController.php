@@ -95,6 +95,11 @@ class AccountController extends Controller
 
     }
 
+    public function register(Request $request)
+    {
+        return view('user.register');
+    }
+
     public function invited()
     {
 

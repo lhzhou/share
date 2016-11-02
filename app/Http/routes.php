@@ -1,8 +1,9 @@
 <?php
 
 
-Route::get('/login' , 'AccountController@login');
-Route::post('/login' , 'AccountController@submitLogin');
+Route::get('/Login' , 'AccountController@login');
+Route::post('/Login' , 'AccountController@submitLogin');
+Route::post('/Register' , 'AccountController@register');
 
 Route::get('/test' , 'WelcomeController@test');
 Route::get('/show/{id}' ,  'WelcomeController@show');

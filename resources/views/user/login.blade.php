@@ -7,7 +7,7 @@
         <span style="color: #FFCC33;font-size: 18px">{{env('SITE_NAME')}}</span><i style="color: #FFCC33;font-style: normal;font-size: 12px;margin-left: 15px">分享创造价值</i>
     </div>
 
-    <form class="form-horizontal col-sm-12 ajaxForm " style="margin-top: 15px" role="form" method="post" action="{{url('login')}}">
+    <form class="form-horizontal col-sm-12 ajaxForm " style="margin-top: 15px" role="form" method="post" action="{{url('Login')}}">
 
         <div class="form-group form-group-lg">
             <div style="margin-bottom: 25px" class="input-group">
@@ -28,13 +28,13 @@
 
             <div class="form-group">
                 <div class="col-sm-12">
-                    <a href="{{url('register')}}" class="btn btn-warning btn-lg btn-block">立刻注册</a>
+                    <a href="{{url('Register')}}" class="btn btn-warning btn-lg btn-block">立刻注册</a>
                 </div>
             </div>
 
             <div class="form-group">
                 <div class="col-sm-12">
-                    <a href="{{'getPwd'}}" class="btn btn-danger btn-lg btn-block">找回密码</a>
+                    <a href="#{{'GetPwd'}}" class="btn btn-danger btn-lg btn-block">找回密码</a>
                 </div>
             </div>
 
