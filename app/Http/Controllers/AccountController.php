@@ -100,6 +100,69 @@ class AccountController extends Controller
         return view('user.register');
     }
 
+    public function registerSubmit(Request $request)
+    {
+
+        $messages = [
+            'mobile.required' => '请输入用户名',
+            'password.required' => '请输入密码'
+        ];
+
+        $rules= [
+            'mobile' => 'required',
+            'password' => 'required',
+        ];
+
+        /* 开始验证 */
+        $validator = Validator::make($request->all(), $rules, $messages);
+
+        if ($validator->fails()) {
+            return \Response::json(
+                [
+                    'method'    => 'alert',
+                    'msg'       =>  $validator->errors()->first()
+                ]
+
+            );
+        }
+
+        $params = $request->only('mobile' , 'password');
+
+        $res = Http::post(env('API_URL').'Account/Register' , $params);
+
+        if ($res->status == 0)
+        {
+            /* 写入缓存 */
+
+            session(
+                [
+                    'user.id' => $res->results->id,
+                    'user.mobile' => $res->results->mobile,
+                    'user.pid' => $res->results->pid,
+                ]
+            );
+
+            $arr = [
+                    'method'    => 'redirect',
+                    'url'       =>  url('/'),
+                ];
+
+
+        } else {
+
+            $arr = [
+                'method'    => 'alert',
+                'msg'       =>  $res->message
+            ];
+
+
+
+        }
+
+        return \Response::json($arr);
+
+    }
+
     public function invited()
     {
 

@@ -24,7 +24,7 @@
             <p class="nickname">{{session('user.name')}} 您好!</p>
             <span class="balance">
                 账户余额：<span style=" font-size:2rem"> ￥</span>
-                <span style=" font-size:2rem;">1000.11 </span>
+                <span style=" font-size:2rem;">{{$balance}} </span>
             </span>
 
         </div>

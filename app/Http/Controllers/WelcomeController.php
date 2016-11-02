@@ -7,17 +7,30 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Crypt;
+use App\Http\Controllers\Helper\Http;
 class WelcomeController extends Controller
 {
     public function index()
     {
 
-        return view('welcome');
+
+        $res = Http::post(env('API_URL').'Wallet/Balance' , ['user_id' => session('user.id')]);
+
+
+        if ($res->status == 0)
+        {
+            $data['balance'] = $res->results->balance;
+        } else {
+            $data['balance'] = '获取失败';
+        }
+
+
+        return view('welcome' , $data);
     }
 
     public function test(Request $request)
     {
-        $user = '123456';
+
 
         $article = '13123123';
 

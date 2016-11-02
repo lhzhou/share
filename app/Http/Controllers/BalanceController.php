@@ -16,15 +16,14 @@ class BalanceController extends Controller
 
         $params['user_id'] = session('user.id');
 
-        $res = Http::post(env('API_URL').'Wallet/Balance' , $params);
+        $res = Http::post(env('API_URL').'Wallet/Balance' , ['user_id' => session('user.id')]);
 
-        if ($res->status == 0) {
 
+        if ($res->status == 0)
+        {
             $data['wallet'] = $res->results;
-
         } else {
-
-            $data['msg'] = $res->message;
+            $data['wallet'] = '获取失败';
         }
 
 
@@ -41,14 +40,15 @@ class BalanceController extends Controller
 
     public function takeMoneySubmit(Request $request)
     {
-        $params['account']      =   $request->input('account');
-        $params['name']         =   $request->input('name');
-        $params['qty']          =   $request->input('qty');
+        $params['alipay_account']      =   $request->input('account');
+        $params['alipay_name']         =   $request->input('name');
+        $params['amount']          =   $request->input('qty');
         $params['user_id']      =   session('user.id');
         $params['ip']           =   $request->ip();
-        $res = Http::post(env('API_URL').'balance/addTakeMoney' , $params);
+        $res = Http::post(env('API_URL').'Wallet/Withdrawals' , $params);
 
-        if ($res->status == 1) {
+
+        if ($res->status == 0) {
             $arr = [
                 'method'    => 'redirect',
                 'url'       =>  url('/takeMoneyLog'),
@@ -72,9 +72,9 @@ class BalanceController extends Controller
         $params['page'] = $request->input('page');
         $params['user_id'] = session('user.id');
 
-        $res = Http::post(env('API_URL') . 'balance/takeMoneyLog', $params);
+        $res = Http::post(env('API_URL') . '/Wallet/Withdrawals/Log', $params);
 
-        if ($res->status == 1) {
+        if ($res->status == 0) {
             $data['log'] =  $res->results;
         } else {
 

@@ -14,7 +14,7 @@
             <tbody>
             @foreach($log->data AS $value)
                 <tr>
-                    <td>{{$value->qty}}</td>
+                    <td>{{$value->amount}}</td>
                     <td>{{\App\Http\Controllers\Helper\Helper::Status($value->status)}}</td>
                     <td>{{date('Y-m-d h:i:s' , $value->created_at)}}</td>
                 </tr>
