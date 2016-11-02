@@ -51,7 +51,7 @@ class BalanceController extends Controller
         if ($res->status == 0) {
             $arr = [
                 'method'    => 'redirect',
-                'url'       =>  url('/takeMoneyLog'),
+                'url'       =>  url('Wallet/withdrawalsLog'),
             ];
         } else {
             $arr = [
