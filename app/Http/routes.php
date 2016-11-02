@@ -27,7 +27,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('wallet' , 'BalanceController@wallet');
     Route::get('wallet/Withdrawals' , 'BalanceController@withdrawals');
     Route::post('wallet/Withdrawals' , 'BalanceController@withdrawalsSubmit');
-    Route::get('takeMoneyLog' , 'BalanceController@takeMoneyLog');
+    Route::get('wallet/Withdrawals/Log' , 'BalanceController@withdrawalsLog');
 
 
 

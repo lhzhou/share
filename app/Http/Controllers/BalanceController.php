@@ -65,7 +65,7 @@ class BalanceController extends Controller
     }
 
 
-    public function takeMoneyLog(Request $request)
+    public function withdrawalsLog(Request $request)
     {
         $data['title'] = '提现记录';
 
