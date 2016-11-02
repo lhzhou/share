@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use App\Http\Controllers\Helper\Http;
-class Balance extends Controller
+class BalanceController extends Controller
 {
     public function wallet()
     {

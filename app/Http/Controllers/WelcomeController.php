@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 
 use Crypt;
-class Welcome extends Controller
+class WelcomeController extends Controller
 {
     public function index()
     {

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 
-class UserHelp extends Controller
+class UserHelpController extends Controller
 {
 
     public function index()
