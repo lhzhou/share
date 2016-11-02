@@ -4,14 +4,14 @@
 Route::get('/login' , 'AccountController@login');
 Route::post('/login' , 'AccountController@submitLogin');
 
-Route::get('/test' , 'Welcome@test');
-Route::get('/show/{id}' ,  'Welcome@show');
+Route::get('/test' , 'WelcomeController@test');
+Route::get('/show/{id}' ,  'WelcomeController@show');
 
 
 Route::group(['middleware' => ['web']], function () {
 
-    Route::get('/' , 'Welcome@index');
-    Route::get('user/Invited' , 'UserProfile@invited');
+    Route::get('/' , 'WelcomeController@index');
+    Route::get('user/Invited' , 'AccountController@invited');
     Route::get('user/Help' , 'UserHelp@index');
     Route::get('user/Help/show' , 'UserHelp@show');
     Route::get('out' , 'UserProfile@out');

@@ -11,6 +11,8 @@ bootstrap/cache/
 .env.*.php
 .env.php
 .env
+.composer.lock
+_ide_helper.php
 
 # Rocketeer PHP task runner and deployment package. https://github.com/rocketeers/rocketeer
 .rocketeer/
