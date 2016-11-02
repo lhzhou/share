@@ -61,6 +61,7 @@ class AccountController extends Controller
 
         $res = Http::post(env('API_URL').'Account/Login' , $params);
 
+        dd($res);
         if ($res->status == 0)
         {
             /* 写入缓存 */
