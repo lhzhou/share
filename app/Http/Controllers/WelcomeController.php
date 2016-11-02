@@ -48,4 +48,11 @@ class WelcomeController extends Controller
     }
 
 
+    public function out()
+    {
+        \Session::clear();
+        return redirect(url('Login'));
+    }
+
+
 }

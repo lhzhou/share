@@ -107,14 +107,14 @@
 
         <ul>
             <li>
-                <a href="{{url('takeMoney')}}">
+                <a href="{{url('Wallet/Withdrawals')}}">
                     <div class="yz_ico"> <span class="fa fa-credit-card icon2"></span> </div>
                     <span>我要提现</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{url('takeMoneyLog')}}">
+                <a href="{{url('Wallet/Withdrawals/Log')}}">
                     <div class="yz_ico"> <span class="fa fa-pie-chart icon2"></span> </div>
                     <span>提现记录</span>
                 </a>
@@ -127,7 +127,7 @@
                 </a>
             </li>
             <li>
-                <a href="{{url('out')}}">
+                <a href="{{url('Out')}}">
                     <div class="yz_ico"> <span class="fa fa-power-off icon2"></span> </div>
                     <span>退出登录</span>
                 </a>
