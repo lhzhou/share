@@ -17,8 +17,9 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/' , 'WelcomeController@index');
     Route::get('Invited' , 'AccountController@invited');
-    Route::get('Help' , 'UserHelp@index');
-    Route::get('Help/Show' , 'UserHelp@show');
+    Route::get('ChangePassword' , 'AccountController@changePassword');
+    Route::get('Help' , 'ColumnController@index');
+    Route::get('Help/Show' , 'ColumnController@show');
 
     Route::get('Wallet' , 'BalanceController@wallet');
     Route::get('Wallet/Withdrawals' , 'BalanceController@withdrawals');

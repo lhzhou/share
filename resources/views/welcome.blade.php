@@ -13,6 +13,7 @@
     {{--main top end--}}
 
     <div class="clearfix"></div>
+
     {{--user info--}}
 
     <div class="main-user-info row">
@@ -63,14 +64,14 @@
             </li>
 
             <li>
-                <a href="{{url('user/Invited')}}" >
+                <a href="{{url('Invited')}}" >
                     <div class="yz_ico"> <span class="fa fa-slideshare icon2"></span> </div>
                     <span>我要收徒</span>
                 </a>
             </li>
 
             <li>
-                <a href="{{url('user/Help')}}">
+                <a href="{{url('Help')}}">
                 <div class="yz_ico"> <span class="fa fa-h-square icon2"></span> </div>
                 <span>新手帮助</span>
                 </a>
@@ -121,7 +122,7 @@
             </li>
 
             <li>
-                <a href="{{url('user/changPwd')}}">
+                <a href="{{url('ChangePassword')}}">
                     <div class="yz_ico"> <span class="fa fa-expeditedssl icon2"></span> </div>
                     <span>密码修改</span>
                 </a>

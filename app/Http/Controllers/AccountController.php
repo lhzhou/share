@@ -163,6 +163,16 @@ class AccountController extends Controller
 
     }
 
+    public function changePassword()
+    {
+
+        $data = [];
+        $data['title'] = '我要收徒';
+
+        return view('user.changePassword' , $data);
+
+    }
+
     public function invited()
     {
 
@@ -177,4 +187,7 @@ class AccountController extends Controller
         \Session::clear();
         return redirect(url('/login'));
     }
+    
+    
+    
 }

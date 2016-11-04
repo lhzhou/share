@@ -11,13 +11,11 @@
 
         <div class="col-xs-12 text-center" style="margin-top: 15px;">
             立刻扫码领取￥1现金奖励,满10提现
-
         </div>
 
     </div>
 
-
-    <div class="col-xs-12" style="word-wrap: break-word; background: red;color: yellow;margin-top: 8px;border: solid 1px #333" >
+    <div class="col-xs-12" style="word-wrap: break-word; background: red;color: yellow;margin-top: 8px;border: solid 1px #333;padding: 12px " >
         http://wwww.baidu.com/312312312321321
     </div>
 
@@ -31,6 +29,6 @@
 
     <div class="col-sm-12" style="margin-top: 15px">
 
-        <a href="{{url('user/register')}}" class="btn btn-danger btn-block">立刻注册</a>
+        <a href="{{url('Register')}}" class="btn btn-danger btn-block">立刻注册</a>
     </div>
 @endsection
