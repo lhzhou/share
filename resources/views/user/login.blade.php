@@ -25,7 +25,7 @@
                     <button type="submit" class="btn btn-success btn-lg btn-block">立刻登录</button>
                 </div>
             </div>
-
+            <div id="overlay">111</div>
             <div class="form-group">
                 <div class="col-sm-12">
                     <a href="{{url('Register')}}" class="btn btn-warning btn-lg btn-block">立刻注册</a>

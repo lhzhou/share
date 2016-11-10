@@ -6,7 +6,7 @@ Route::post('/Login' , 'AccountController@submitLogin');
 Route::get('/Register' , 'AccountController@register');
 Route::post('/Register' , 'AccountController@registerSubmit');
 
-Route::get('out' , 'WelcomeController@out');
+Route::get('Out' , 'WelcomeController@out');
 
 
 Route::get('/test' , 'WelcomeController@test');
@@ -18,6 +18,10 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/' , 'WelcomeController@index');
     Route::get('Invited' , 'AccountController@invited');
     Route::get('ChangePassword' , 'AccountController@changePassword');
+
+    Route::get('/Lower' , 'AccountController@lower');
+
+
     Route::get('Help' , 'ColumnController@index');
     Route::get('Help/Show' , 'ColumnController@show');
 

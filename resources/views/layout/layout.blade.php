@@ -8,21 +8,21 @@
     <link rel="shortcut icon" href="/favicon.ico">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{{url('css/sweetalert2.min.css')}}">
-
+    <link rel="stylesheet" href="{{url('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/bootstrap-theme.min.css')}}">
     <link rel="stylesheet" href="{{url('css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{url('css/jquery.toast.css')}}">
     <link rel="stylesheet" href="{{url('css/lib.css')}}">
-
+    <link rel="stylesheet" href="{{url('css/loaders.min.css')}}">
     <link rel="stylesheet" href="{{url('css/style.css')}}">
-
-    <script src="//cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
-    <script src="//cdn.bootcss.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="{{url('js/jquery.min.js')}}"></script>
+    <script src="{{url('js/bootstrap.min.js')}}"></script>
     <script src="{{url('js/jquery.blockUI.js')}}"></script>
     <script src="{{url('js/jquery.form.min.js')}}"></script>
-    <script src="{{url('js/sweetalert2.min.js')}}"></script>
+    <script src="{{url('js/jquery.toast.js')}}"></script>
     <script src="{{url('js/base.js')}}"></script>
+
+                
 
 </head>
 

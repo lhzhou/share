@@ -163,6 +163,30 @@ class AccountController extends Controller
 
     }
 
+
+    public function lower()
+    {
+
+        $data = [];
+        $data['title'] = '我要收徒';
+
+        $params['user_id'] = session('user.id');
+
+        $res = Http::post(env('API_URL') . 'Account/Lower', $params);
+
+        if ($res->status == 0) {
+            $data['results'] =  $res->results;
+        } else {
+
+            $data['errorMsg'] = $res->message;
+        }
+
+        dd($data);
+
+        return view('user.lower' , $data);
+    }
+
+
     public function changePassword()
     {
 

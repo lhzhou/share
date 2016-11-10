@@ -99,7 +99,7 @@
                 </a>
             </li>
 
-            <li> <a href="">
+            <li><a href="{{url('Lower')}}">
                     <div class="yz_ico"> <span class="fa fa-user-plus icon1"></span> </div>
                     <span>我的徒弟</span>
                 </a>
