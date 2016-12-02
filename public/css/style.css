@@ -12,21 +12,9 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
+    background: #edecf2;
 }
 
-#overlay {
-    background: #000;
-    filter: alpha(opacity=50); /* IE的透明度 */
-    opacity: 0.5;  /* 透明度 */
-    display: none;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100%;
-    z-index: 100; /* 此处的图层要大于页面 */
-    display:none;
-}
 
 .login-head{
     background: #df3031 ;
@@ -117,3 +105,21 @@ body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 {
 
 .main-menu li  .icon, .main-menu .fa {font-size: 30px;line-height: 2rem;}
 
+
+.lowerListing{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.lowerListing li{
+    background: #FFF;
+    padding: 8px 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-top:#e4e4e4 1px double;
+    border-bottom:#e4e4e4 1px double;
+    margin-left: -15px;
+    margin-right: -15px;
+    overflow: hidden;
+
+}

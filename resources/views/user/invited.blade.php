@@ -16,7 +16,7 @@
     </div>
 
     <div class="col-xs-12" style="word-wrap: break-word; background: red;color: yellow;margin-top: 8px;border: solid 1px #333;padding: 12px " >
-        http://wwww.baidu.com/312312312321321
+        {{url('Register/'.session('user.id'))}}
     </div>
 
     {{--二维码--}}

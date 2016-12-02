@@ -21,9 +21,6 @@
     <script src="{{url('js/jquery.form.min.js')}}"></script>
     <script src="{{url('js/jquery.toast.js')}}"></script>
     <script src="{{url('js/base.js')}}"></script>
-
-                
-
 </head>
 
 <body>

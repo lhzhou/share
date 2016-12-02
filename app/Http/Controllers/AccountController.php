@@ -95,9 +95,12 @@ class AccountController extends Controller
 
     }
 
-    public function register(Request $request)
+    public function register($id = '')
     {
-        return view('user.register');
+
+        $data['id'] = $id;
+
+        return view('user.register' , $data);
     }
 
     public function registerSubmit(Request $request)
@@ -126,7 +129,7 @@ class AccountController extends Controller
             );
         }
 
-        $params = $request->only('mobile' , 'password');
+        $params = $request->only('mobile' , 'password','pid');
 
         $res = Http::post(env('API_URL').'Account/Register' , $params);
 
@@ -168,20 +171,18 @@ class AccountController extends Controller
     {
 
         $data = [];
-        $data['title'] = '我要收徒';
+        $data['title'] = '我的收徒';
 
         $params['user_id'] = session('user.id');
-
+        
         $res = Http::post(env('API_URL') . 'Account/Lower', $params);
 
         if ($res->status == 0) {
-            $data['results'] =  $res->results;
+            $data['listing'] =  $res->results;
         } else {
 
             $data['errorMsg'] = $res->message;
         }
-
-        dd($data);
 
         return view('user.lower' , $data);
     }

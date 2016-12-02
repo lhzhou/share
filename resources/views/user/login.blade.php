@@ -2,7 +2,6 @@
 
 @section('content')
 
-
     <div class="row" style="background: #df3031 ;height: 48px;display: block;line-height: 48px; padding: 0 15px">
         <span style="color: #FFCC33;font-size: 18px">{{env('SITE_NAME')}}</span><i style="color: #FFCC33;font-style: normal;font-size: 16px;margin-left: 15px">分享创造价值</i>
     </div>

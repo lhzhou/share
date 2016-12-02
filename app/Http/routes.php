@@ -3,7 +3,7 @@
 
 Route::get('/Login' , 'AccountController@login');
 Route::post('/Login' , 'AccountController@submitLogin');
-Route::get('/Register' , 'AccountController@register');
+Route::get('/Register/{id?}' , 'AccountController@register');
 Route::post('/Register' , 'AccountController@registerSubmit');
 
 Route::get('Out' , 'WelcomeController@out');
